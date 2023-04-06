@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { LikeButton } from "../components";
 import { headingBadge, nameStyle } from "../../data/data";
+import Warning from "../components/helpers/Warning";
 
 const PageButton2 = (props) => {
   const { link, text } = props.data;
@@ -78,7 +79,7 @@ const Home = () => {
 
   return (
     <>
-      {" "}
+      {<Warning />}
       {/* <script src="https://unpkg.com/tailwindcss-jit-cdn"></script> */}
       <section className="flex flex-col my-40 antialiased text-gray-200 ">
         <div className="max-w-6xl mx-auto p-4 sm:px-6 h-full">
