@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ComingSoonPage = () => {
   return (
@@ -8,23 +9,22 @@ const ComingSoonPage = () => {
           ⏰ Coming<span className="ml-2 text-blue-600">Soon</span> ⏰
         </span>
         <h1 className="py-5 text-5xl font-semibold text-gray-800 md:text-6xl">
-          Font<span className="ml-2 text-blue-600">Generator</span>
+          Site<span className="ml-2 text-blue-600">Generating...</span>
         </h1>
 
         <p className="mt-2 text-sm text-gray-500 md:text-lg">
-          <a href="https://fontgenerator.org/">Font generator</a> is the best
-          free online website to generate cool and stylish{" "}
-          <strong>fancy fonts</strong> without any third party app. The website
-          is under construction meanwhile you can follow on below social
-          network.
+          Something amazing is on its way. Stay tuned for updates! working hard
+          to bring you something great. Watch this space. Get ready for
+          something exciting. Check back soon for more details. Putting the
+          finishing touches on something special. Exciting things are coming!
         </p>
         <div className="flex space-x-3 justify-center lg:justify-start mt-6">
-          <a
-            href="/projects"
+          <Link
+            to="/projects"
             className="bg-pink-600 px-4 py-2 font-semibold text-white inline-flex items-center space-x-2 rounded"
           >
-            asd
-          </a>
+            Go Back
+          </Link>
         </div>
         <img
           src="https://st.depositphotos.com/1106005/3146/i/450/depositphotos_31468817-stock-photo-coming-soon-sign.jpg"

@@ -145,89 +145,89 @@ export const showCaseBlock = [
         id: 1,
         title: "Project 1",
         liveLink: "https://jsb-p-2.netlify.app/",
-        timeline: "left",
         imglink:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsYWoQIj4S37bMrdOk66DzLfO5CBmemLpNpg&usqp=CAU",
+        description: "commons",
       },
       {
         id: 2,
         title: "Project 2",
         liveLink: "https://jsb-p-3.netlify.app/",
-        timeline: "right",
         imglink:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsYWoQIj4S37bMrdOk66DzLfO5CBmemLpNpg&usqp=CAU",
+        description: "commons",
       },
       {
         id: 3,
         title: "Project 3",
         liveLink: "https://jsb-p-4.netlify.app/",
-        timeline: "left",
         imglink:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsYWoQIj4S37bMrdOk66DzLfO5CBmemLpNpg&usqp=CAU",
+        description: "commons",
       },
       {
         id: 4,
         title: "Project 4",
         liveLink: "https://jsb-p-5.netlify.app/",
-        timeline: "right",
         imglink:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsYWoQIj4S37bMrdOk66DzLfO5CBmemLpNpg&usqp=CAU",
+        description: "commons",
       },
       {
         id: 5,
         title: "Project 5",
         liveLink: "https://jsb-p-6.netlify.app/",
-        timeline: "left",
         imglink:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsYWoQIj4S37bMrdOk66DzLfO5CBmemLpNpg&usqp=CAU",
+        description: "commons",
       },
       {
         id: 6,
         title: "Project 6",
         liveLink: "https://jsb-p-7.netlify.app/",
-        timeline: "right",
         imglink:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsYWoQIj4S37bMrdOk66DzLfO5CBmemLpNpg&usqp=CAU",
+        description: "commons",
       },
       {
         id: 7,
         title: "Project 7",
         liveLink: "https://jsb-p-8.netlify.app/",
-        timeline: "left",
         imglink:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsYWoQIj4S37bMrdOk66DzLfO5CBmemLpNpg&usqp=CAU",
+        description: "commons",
       },
       {
         id: 8,
         title: "Project 8",
         liveLink: "https://jsb-p-9.netlify.app/",
-        timeline: "right",
         imglink:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsYWoQIj4S37bMrdOk66DzLfO5CBmemLpNpg&usqp=CAU",
+        description: "commons",
       },
       {
         id: 9,
         title: "Project 9",
         liveLink: "https://jsb-p-10.netlify.app/",
-        timeline: "left",
         imglink:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsYWoQIj4S37bMrdOk66DzLfO5CBmemLpNpg&usqp=CAU",
+        description: "commons",
       },
       {
         id: 10,
         title: "Project 10",
         liveLink: "https://jsb-p-14.netlify.app/",
-        timeline: "right",
         imglink:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsYWoQIj4S37bMrdOk66DzLfO5CBmemLpNpg&usqp=CAU",
+        description: "commons",
       },
       {
         id: 11,
         title: "Project 11",
         liveLink: "https://jsb-p-13.netlify.app/",
-        timeline: "left",
         imglink:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsYWoQIj4S37bMrdOk66DzLfO5CBmemLpNpg&usqp=CAU",
+        description: "commons",
       },
     ],
   },

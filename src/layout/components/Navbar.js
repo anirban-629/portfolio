@@ -39,7 +39,7 @@ const Navbar = () => {
     return classes.filter(Boolean).join(" ");
   }
   return (
-    <Disclosure as="nav" className="bg-white  sticky top-0 z-50 ">
+    <Disclosure as="nav" className="bg-white  sticky top-0 z-50 border-b-2">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">

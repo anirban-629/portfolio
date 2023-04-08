@@ -1,95 +1,90 @@
 import React from "react";
-import { showCaseBlock } from "../../../data/data";
 import { useParams } from "react-router-dom";
+import { showCaseBlock } from "../../../data/data";
 import ComingSoonPage from "../../pages/ComingSoonPage";
 
-const LeftBlock = ({ title, id, imgLink }) => (
-  <div className="flex flex-row w-full">
-    <div className="w-2/5 px-2 py-10">
-      <div className="flex flex-col w-full rounded-lg  bg-white px-4 py-5">
-        <div className="text-gray-600 mb-2 flex justify-between">
-          <div className="font-bold">{title}</div>
-        </div>
-        <img
-          alt=""
-          className="flex-1 flex-shrink-0 object-cover h-28 mb-4 bg-center rounded-sm dark:bg-gray-500 w-80"
-          src={imgLink}
-        />
-      </div>
-    </div>
-    <div className="w-1/5  flex justify-center">
-      <div className="relative flex h-full w-1 bg-green-300 items-center justify-center">
-        <div className="absolute flex flex-col justify-center h-24 w-24 rounded-full border-2 border-green-300 leading-none text-center z-10 bg-white font-thin">
-          <div>{id}</div>
-        </div>
-      </div>
-    </div>
-    <div className="w-2/5 px-2 py-10 "></div>
-  </div>
-);
-
-const RightBlock = ({ title, id, imgLink }) => (
-  <div className="flex flex-row w-full">
-    <div className="w-2/5 px-2 py-10"></div>
-    <div className="w-1/5  flex justify-center">
-      <div className="relative flex h-full w-1 bg-green-300 items-center justify-center">
-        <div className="absolute flex flex-col justify-center h-24 w-24 rounded-full border-2 border-green-300 leading-none text-center z-10 bg-white font-thin">
-          {id}
-        </div>
-      </div>
-    </div>
-    <div className="w-2/5 px-2 py-10 ">
-      <div className="flex flex-col w-full rounded-lg  bg-white px-4 py-5">
-        <div className="text-gray-600 mb-2 flex justify-between">
-          <div className="font-bold">{title}</div>
-        </div>
-        <img
-          alt=""
-          className="flex-1 flex-shrink-0 object-cover h-32 mb-4 bg-center rounded-sm dark:bg-gray-500 w-80"
-          src={imgLink}
-        />
-      </div>
-    </div>
-  </div>
-);
-
-const SingleProject = () => {
-  const { id } = useParams();
-  const projects = showCaseBlock[Number(id)].projects;
+const Block = (props) => {
+  const { title, liveLink, imglink, description } = props.data;
+  const github = "https://github.com/anirban-629";
   return (
-    <>
-      <div className="min-h-screen bg-white">
-        <div className="min-h-screen flex justify-center">
-          <div className="w-2/3 mx-auto">
-            {projects ? (
-              projects.map((e) => {
-                return (
-                  <>
-                    {e.timeline === "left" ? (
-                      <LeftBlock
-                        key={e.id}
-                        id={e.id}
-                        imgLink={e.imglink}
-                        title={e.title}
-                      />
-                    ) : (
-                      <RightBlock
-                        key={e.id}
-                        id={e.id}
-                        imgLink={e.imglink}
-                        title={e.title}
-                      />
-                    )}
-                  </>
-                );
-              })
-            ) : (
-              <ComingSoonPage />
-            )}
+    <div className="wrapper antialiased text-gray-900 uppercase">
+      <div>
+        <img
+          src={imglink}
+          alt=" random imgee"
+          className="w-full object-cover object-center rounded-lg shadow-md"
+        />
+
+        <div className="relative px-4 -mt-16  ">
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h4 className="mt-1 text-xl font-semibold uppercase leading-tight truncate">
+              {title}
+            </h4>
+
+            <div className="mt-1 text-sm">
+              <a
+                className="hover:text-fuchsia-800"
+                href={liveLink}
+                target="_blank"
+                rel="noreferrer"
+              >
+                liveLink
+              </a>{" "}
+              &bull;{" "}
+              <a
+                className="hover:text-fuchsia-800"
+                href={github}
+                target="_blank"
+                rel="noreferrer"
+              >
+                github
+              </a>
+            </div>
+            <div className="mt-4">
+              <span className="text-teal-600 text-md font-semibold">
+                description{" "}
+              </span>
+              <span className="text-sm text-gray-600 lowercase">
+                {description}
+              </span>
+            </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
+  );
+};
+
+const SingleProject = () => {
+  const { id } = useParams();
+  const data = showCaseBlock[Number(id)].projects;
+  if (!data) return <ComingSoonPage />;
+  return (
+    <div className="flex justify-center items-center">
+      <div className="2xl:mx-auto 2xl:container lg:px-20 lg:py-16 md:py-12 md:px-6 py-9 px-4 w-96 sm:w-auto">
+        <div role="main" className="flex flex-col items-center justify-center">
+          <h1 className="text-4xl font-semibold leading-9 text-center text-gray-800 dark:text-gray-50">
+            This Week Blogs
+          </h1>
+        </div>
+
+        <div className="lg:grid lg:grid-cols-4 md:grid md:grid-cols-3 flex-wrap gap-10 mt-10">
+          {data.map((ele) => {
+            return (
+              <Block
+                key={ele.id}
+                data={{
+                  title: ele.title,
+                  liveLink: ele.liveLink,
+                  imglink: ele.imglink,
+                  description: ele.description,
+                }}
+              />
+            );
+          })}
+        </div>
+      </div>
+    </div>
   );
 };
 
