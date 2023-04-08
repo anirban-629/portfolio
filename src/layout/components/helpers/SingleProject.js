@@ -24,25 +24,24 @@ const Block = (props) => {
             <div className="mt-1 text-sm">
               <a
                 className="hover:text-fuchsia-800"
-                href={liveLink}
-                target="_blank"
-                rel="noreferrer"
-              >
-                liveLink
-              </a>{" "}
-              &bull;{" "}
-              <a
-                className="hover:text-fuchsia-800"
                 href={github}
                 target="_blank"
                 rel="noreferrer"
               >
+                <i className="fa-brands fa-github mr-2"></i>
                 github
               </a>
             </div>
             <div className="mt-4">
               <span className="text-teal-600 text-md font-semibold">
-                description{" "}
+                <a
+                  className="hover:text-fuchsia-800"
+                  href={liveLink}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  live on netlify
+                </a>{" "}
               </span>
               <span className="text-sm text-gray-600 lowercase">
                 {description}
@@ -63,8 +62,8 @@ const SingleProject = () => {
     <div className="flex justify-center items-center">
       <div className="2xl:mx-auto 2xl:container lg:px-20 lg:py-16 md:py-12 md:px-6 py-9 px-4 w-96 sm:w-auto">
         <div role="main" className="flex flex-col items-center justify-center">
-          <h1 className="text-4xl font-semibold leading-9 text-center text-gray-800 dark:text-gray-50">
-            This Week Blogs
+          <h1 className="text-4xl font-semibold leading-9 text-center text-gray-800 dark:text-gray-50 uppercase">
+            {showCaseBlock[Number(id)].title}
           </h1>
         </div>
 
@@ -77,7 +76,6 @@ const SingleProject = () => {
                   title: ele.title,
                   liveLink: ele.liveLink,
                   imglink: ele.imglink,
-                  description: ele.description,
                 }}
               />
             );
