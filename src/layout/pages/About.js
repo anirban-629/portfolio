@@ -104,7 +104,7 @@ const About = () => {
                 <div className="flex flex-wrap justify-center">
                   <div className="w-full lg:w-9/12 px-4">
                     <p className="mb-4 text-lg leading-relaxed text-blueGray-700">
-                      Link Computer Science & Engineering student, who is
+                      Computer Science & Engineering student, who is
                       passionate about learning and seeking corporate experience
                       to apply the technical skills learned through academic
                       knowledge and improvise, showcase the skills, and
