@@ -1,5 +1,5 @@
 import React from "react";
-import { About, Home, NotFound, Project, Skills } from "./pages";
+import { About, Blog, GuidedPaths, Home, NotFound, Project, Skills } from "./pages";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Navbar, SingleProject } from "./components";
 
@@ -13,6 +13,8 @@ const Page = () => {
         <Route exact path="skills" element={<Skills />} />
         <Route exact path="projects" element={<Project />} />
         <Route exact path="projects/project/:id" element={<SingleProject />} />
+        <Route exact path="blogs" element={<Blog />} />
+        <Route exact path="guidedpaths" element={<GuidedPaths />} />
         <Route exact path="*" element={<NotFound />} />
         <Route />
       </Routes>

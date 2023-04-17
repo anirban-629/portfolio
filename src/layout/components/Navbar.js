@@ -1,8 +1,7 @@
-import { Fragment, useState } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { useState } from "react";
+import { Disclosure, Menu } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import "./styles/navbar.css";
-import { Link } from "react-router-dom";
 import MenuButton from "./helpers/MenuButton";
 import BellIcon from "./helpers/BellIcon";
 
@@ -28,16 +27,34 @@ const Navbar = () => {
       to: "/projects",
       current: active === "projects" ? true : false,
     },
-    // { id: 4, name: "Blogs", to: "/blogs", current: active===blogs ? true : false },
-    // { id: 6, name: "Reviews", to: "/reviews", current: active===reviews ? true : false },
-    // { id: 5, name: "Contact", to: "/contact", current: active===contact ? true : false },
+    {
+      id: 4,
+      name: "Blogs",
+      to: "/blogs",
+      current: active === "blogs" ? true : false,
+    },
+    {
+      id: 5,
+      name: "Guided Paths",
+      to: "/guidedpaths",
+      current: active === "blogs" ? true : false,
+    },
+    // { id: 6, name: "Contact", to: "/contact", current: active==="contact" ? true : false },
+    // {
+    //   id: 7,
+    //   name: "Reviews",
+    //   to: "/reviews",
+    //   current: active === "reviews" ? true : false,
+    // },
   ];
   const setActivePage = (pagename) => {
     setActive(String(pagename).toLowerCase());
   };
-  function classNames(...classes) {
-    return classes.filter(Boolean).join(" ");
-  }
+  // ! {PROFILE MENU}
+  // function classNames(...classes) {
+  //   return classes.filter(Boolean).join(" ");
+  // }
+  // ! {PROFILE MENU}
   return (
     <Disclosure as="nav" className="bg-white  sticky top-0 z-50 border-b-2">
       {({ open }) => (
@@ -100,7 +117,7 @@ const Navbar = () => {
                       />
                     </Menu.Button>
                   </div>
-                  <Transition
+                  {/* <Transition
                     as={Fragment}
                     enter="transition ease-out duration-100"
                     enterFrom="transform opacity-0 scale-95"
@@ -150,7 +167,7 @@ const Navbar = () => {
                         )}
                       </Menu.Item>
                     </Menu.Items>
-                  </Transition>
+                  </Transition> */}
                 </Menu>
               </div>
             </div>

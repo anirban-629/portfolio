@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 const ProjectShowcaseBlock = (props) => {
   const { id, title, description, timeline, link } = props.data;
-  console.log(id);
   return (
     <>
       {timeline === "left" ? (

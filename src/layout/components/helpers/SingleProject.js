@@ -4,8 +4,7 @@ import { showCaseBlock } from "../../../data/data";
 import ComingSoonPage from "../../pages/ComingSoonPage";
 
 const Block = (props) => {
-  const { title, liveLink, imglink, description } = props.data;
-  const github = "https://github.com/anirban-629";
+  const { title, liveLink, imglink, description, github, used } = props.data;
   return (
     <div className="wrapper antialiased text-gray-900 uppercase">
       <div>
@@ -34,19 +33,22 @@ const Block = (props) => {
             </div>
             <div className="mt-4">
               <span className="text-teal-600 text-md font-semibold">
-                <a
-                  className="hover:text-fuchsia-800"
-                  href={liveLink}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  live on netlify
-                </a>{" "}
+                {liveLink && (
+                  <a
+                    className="hover:text-fuchsia-800"
+                    href={liveLink}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    live on netlify
+                  </a>
+                )}
               </span>
               <span className="text-sm text-gray-600 lowercase">
                 {description}
               </span>
             </div>
+            {used}
           </div>
         </div>
       </div>
@@ -57,7 +59,7 @@ const Block = (props) => {
 const SingleProject = () => {
   const { id } = useParams();
   const data = showCaseBlock[Number(id)].projects;
-  if (!data) return <ComingSoonPage />;
+  if (!data || data.length === 0) return <ComingSoonPage />;
   return (
     <div className="flex justify-center items-center">
       <div className="2xl:mx-auto 2xl:container lg:px-20 lg:py-16 md:py-12 md:px-6 py-9 px-4 w-96 sm:w-auto">
@@ -65,6 +67,7 @@ const SingleProject = () => {
           <h1 className="text-4xl font-semibold leading-9 text-center text-gray-800 dark:text-gray-50 uppercase">
             {showCaseBlock[Number(id)].title}
           </h1>
+          ``
         </div>
 
         <div className="lg:grid lg:grid-cols-4 md:grid md:grid-cols-3 flex-wrap gap-10 mt-10">
@@ -74,8 +77,10 @@ const SingleProject = () => {
                 key={ele.id}
                 data={{
                   title: ele.title,
-                  liveLink: ele.liveLink,
+                  liveLink: ele.livelink,
                   imglink: ele.imglink,
+                  github: ele.githublink || "https://github.com/anirban-629",
+                  used: ele.used || "",
                 }}
               />
             );

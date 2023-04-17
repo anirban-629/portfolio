@@ -22,7 +22,7 @@ const ProjectHeading = ({
       <p className="text-sm md:text-base text-black mb-4">{description}</p>
       {showGithub ? (
         <a
-          href="https://github.com/anirban-629?tab=repositories"
+          href="https://github.com/anirban-629"
           target="_blank"
           rel="noreferrer"
           className="bg-transparent mr-auto  text-[#82C3EC] hover:text-[#4B56D2] shadow hover:shadow-lg py-2 px-4 border border-[#ADA2FF] hover:border-transparent"
