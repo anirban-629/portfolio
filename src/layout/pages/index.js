@@ -6,3 +6,4 @@ export { default as ComingSoonPage } from "./ComingSoonPage";
 export { default as NotFound } from "./NotFound";
 export { default as Blog } from "./Blog";
 export { default as GuidedPaths } from "./GuidedPaths";
+export { default as Contact } from "./Contact";

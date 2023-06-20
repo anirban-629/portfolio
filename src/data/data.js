@@ -131,7 +131,6 @@ export const nameStyle = {
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
 };
-
 export const showCaseBlock = [
   {
     sid: 0,
@@ -290,5 +289,68 @@ export const showCaseBlock = [
     link: "project",
     timeline: "right",
     projects: [],
+  },
+];
+export const BlogData = [
+  {
+    sno: 1,
+    date: "April 17, 2023",
+    topic: "Roadmaps",
+    heading: "Just Uploaded Guided Paths to learn Programming Languages",
+    description:
+      "Guided Paths is an online platform that offers structured language learning programs with personalized feedback and support from native speakers. Each course includes video lessons, exercises, and assessments to help learners develop their language skills in Link systematic way.",
+    link: "/guidedpaths",
+    linktext: "Guided Paths",
+  },
+];
+export const GuidedPathData = [
+  {
+    sno: 1,
+    imgLink: "",
+    heading: "Learn C Programming Language in a Proper Guided Way",
+    description:
+      "To learn C, start with the basics: understand data types, variables, and operators. Then, learn about control structures, loops, functions, and arrays. Practice writing simple programs and gradually move on to more complex ones. Use online resources like tutorials, videos, and forums. Experiment and debug code to gain practical experience.",
+    steps: [
+      {
+        step: 1,
+        paragraph: "asdasdas",
+      },
+      {
+        step: 2,
+        paragraph: "asdasdas",
+      },
+      {
+        step: 3,
+        paragraph: "asdasdas",
+      },
+      {
+        step: 4,
+        paragraph: "asdasdas",
+      },
+    ],
+  },
+  {
+    sno: 2,
+    imgLink: "",
+    heading: "Learn C++ Programming Language in a Proper Guided Way",
+    description:
+      "To learn C++, start with the basics: understand data types, variables, and operators. Then, learn about control structures, loops, functions, and arrays. Next, explore object-oriented programming concepts like classes and inheritance. Practice writing simple programs and gradually move on to more complex ones. Use online resources like tutorials, videos, and forums. Experiment and debug code to gain practical experience.",
+    steps: [],
+  },
+  {
+    sno: 3,
+    imgLink: "",
+    heading: "Learn Java Programming Language in a Proper Guided Way",
+    description:
+      "To learn Java, start with the basics: understand data types, variables, and operators. Then, learn about control structures, loops, methods, and arrays. Next, explore object-oriented programming concepts like classes and interfaces. Practice writing simple programs and gradually move on to more complex ones. Use online resources like tutorials, videos, and forums. Experiment and debug code to gain practical experience.",
+    steps: [],
+  },
+  {
+    sno: 4,
+    imgLink: "",
+    heading: "Learn Python Programming Language in a Proper Guided Way",
+    description:
+      "To learn Python, start with the basics: understand data types, variables, and operators. Then, learn about control structures, loops, functions, and data structures. Next, explore object-oriented programming concepts and popular libraries like NumPy and Pandas. Practice writing simple programs and gradually move on to more complex ones. Use online resources like tutorials, videos, and forums. Experiment and debug code to gain practical experience.",
+    steps: [],
   },
 ];

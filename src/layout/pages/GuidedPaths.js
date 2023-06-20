@@ -1,13 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { GuidedPathData } from "../../data/data";
 
-const Card = () => {
+const truncateString = (str, maxLen = 100) => {
+  if (str.length > maxLen) {
+    return str.slice(0, maxLen) + "...";
+  } else {
+    return str;
+  }
+};
+
+const Card = ({ sno, imgLink, heading, description, headingLink }) => {
   return (
     <div className="px-4">
       <div className="max-w-[370px] mx-auto mb-10">
         <div className="rounded overflow-hidden mb-8">
           <img
-            src="https://cdn.tailgrids.com/1.0/assets/images/blogs/blog-01/image-01.jpg"
+            src={imgLink || "https://source.unsplash.com/800x600/?programmer"}
             alt=""
             className="w-full"
           />
@@ -15,7 +24,7 @@ const Card = () => {
         <div>
           <h3>
             <Link
-              to="/"
+              to={`/roadmap/${sno}`}
               className="
                  font-semibold
                  text-xl
@@ -26,14 +35,14 @@ const Card = () => {
                  inline-block
                  text-dark
                  hover:text-primary
+                 hover:underline
                  "
             >
-              Meet AutoManage, the best AI management tools
+              {heading}
             </Link>
           </h3>
           <p className="text-base text-body-color">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
+            {truncateString(description, 100)}
           </p>
         </div>
       </div>
@@ -47,9 +56,6 @@ const GuidedPaths = () => {
       <div className="flex flex-wrap justify-center -mx-4">
         <div className="w-full px-4">
           <div className="text-center mx-auto mb-[60px] lg:mb-20 max-w-[510px]">
-            <span className="font-semibold text-lg text-primary mb-2 block">
-              Guided Paths
-            </span>
             <h2
               className="
                  font-bold
@@ -71,10 +77,18 @@ const GuidedPaths = () => {
       </div>
 
       <div className="grid lg:grid-cols-4 md:lg:grid-cols-3 sm:grid-cols-1">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {GuidedPathData.map((e) => {
+          return (
+            <Card
+              key={e.sno}
+              sno={e.sno}
+              imgLink={e.imgLink}
+              heading={e.heading}
+              description={e.description}
+              headingLink={e.headingLink}
+            />
+          );
+        })}
       </div>
     </section>
   );

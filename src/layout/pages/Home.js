@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { LikeButton } from "../components";
 import { headingBadge, nameStyle } from "../../data/data";
-import Warning from "../components/helpers/Warning";
 
 const PageButton2 = (props) => {
   const { link, text } = props.data;
@@ -65,22 +64,20 @@ const PageButton1 = ({ link, text }) => {
 const Home = () => {
   const data = {
     intro:
-      "I'm 3rd year Computer Science & Engineering student purusing from Gargi Memorial Institute of Technology (Approved by AICTE and affiliated to MAKAUT)",
+      "A 4th year Computer Science & Engineering student. I'm purusing my B.Tech from Gargi Memorial Institute of Technology (Approved by AICTE and affiliated to MAKAUT)",
     data: (
       <span>
         This is my Portfolio website, You can check my other{" "}
-        <PageButton2 data={{ link: "/", text: "projects" }} />,{" "}
-        <PageButton2 data={{ link: "/", text: " blogs" }} /> etc... and dont
-        forget to hit the like button and post Link review which will definitely
-        help me to check if i need to imporve my portfolio.
+        <PageButton2 data={{ link: "/projects", text: "projects" }} />,{" "}
+        <PageButton2 data={{ link: "/blogs", text: " blogs" }} /> and dont
+        forget to post review or suggestions.. which will definitely help me to
+        check to imporve perfomance.
       </span>
     ),
   };
 
   return (
     <>
-      {<Warning />}
-      {/* <script src="https://unpkg.com/tailwindcss-jit-cdn"></script> */}
       <section className="flex flex-col my-40 antialiased text-gray-200 ">
         <div className="max-w-6xl mx-auto p-4 sm:px-6 h-full">
           <article className="max-w-sm mx-auto md:max-w-none grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 xl:gap-16 items-center">

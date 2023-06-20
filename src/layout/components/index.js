@@ -9,3 +9,4 @@ export { default as SingleProject } from "./helpers/SingleProject";
 export { default as Navbar } from "./Navbar";
 export { default as Skill } from "./Skill";
 export { default as ProjectsShowcase } from "./ProjectsShowcase";
+export { default as RoadMap } from "./RoadMap";

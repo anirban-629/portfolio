@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Warning = () => {
-  const [visible, setVisibility] = useState(true);
+  const [visible, setVisibility] = useState();
   return (
     <>
       {visible && (

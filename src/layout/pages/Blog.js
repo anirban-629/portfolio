@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { BlogData } from "../../data/data";
 
 const BlogComponent = (props) => {
   const { date, topic, heading, description, link, linktext } = props.data;
@@ -41,24 +42,13 @@ const BlogComponent = (props) => {
 };
 
 const Blog = () => {
-  const BlogData = [
-    {
-      sno: 1,
-      date: "April 17, 2023",
-      topic: "Roadmaps",
-      heading: "Just Uploaded Guided Paths to learn Languages",
-      description:
-        "Guided Paths is an online platform that offers structured language learning programs with personalized feedback and support from native speakers. Each course includes video lessons, exercises, and assessments to help learners develop their language skills in Link systematic way.",
-      link: "/guidedpaths",
-      linktext: "Guided Paths",
-    },
-  ];
+  
   return (
     <div className="my-10">
       <h1 className="text-center text-3xl mb-5">My Blogs</h1>
       <div className="grid lg:grid-cols-2 md:sm:grid-cols-1 sm:grid-cols-1 lg:mx-52 gap-8">
-        {BlogData.map((ele) => {
-          return <BlogComponent data={ele} />;
+        {BlogData.map((e) => {
+          return <BlogComponent key={e.sno} data={e} />;
         })}
       </div>
     </div>

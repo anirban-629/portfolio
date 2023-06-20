@@ -1,45 +1,57 @@
-import { useState } from "react";
 import { Disclosure, Menu } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import "./styles/navbar.css";
 import MenuButton from "./helpers/MenuButton";
 import BellIcon from "./helpers/BellIcon";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
-  const [active, setActive] = useState("");
+  const location = useLocation();
+
   const navigation = [
-    { id: 0, name: "Home", to: "/", current: active === "" ? true : false },
+    {
+      id: 0,
+      name: "Home",
+      to: "/",
+      current: location.pathname.split("/")[1] === "" ? true : false,
+    },
     {
       id: 1,
       name: "About",
       to: "/about",
-      current: active === "about" ? true : false,
+      current: location.pathname.split("/")[1] === "about" ? true : false,
     },
     {
       id: 2,
       name: "Skills",
       to: "/skills",
-      current: active === "skills" ? true : false,
+      current: location.pathname.split("/")[1] === "skills" ? true : false,
     },
     {
       id: 3,
       name: "Projects",
       to: "/projects",
-      current: active === "projects" ? true : false,
+      current: location.pathname.split("/")[1] === "projects" ? true : false,
     },
     {
       id: 4,
       name: "Blogs",
       to: "/blogs",
-      current: active === "blogs" ? true : false,
+      current: location.pathname.split("/")[1] === "blogs" ? true : false,
     },
+    // {
+    //   id: 5,
+    //   name: "Guided Paths",
+    //   to: "/guidedpaths",
+    //   current:
+    //     location.pathname.split("/")[1] === "guided paths" ? true : false,
+    // },
     {
-      id: 5,
-      name: "Guided Paths",
-      to: "/guidedpaths",
-      current: active === "blogs" ? true : false,
+      id: 6,
+      name: "Contact",
+      to: "/contact",
+      current: location.pathname.split("/")[1] === "contact" ? true : false,
     },
-    // { id: 6, name: "Contact", to: "/contact", current: active==="contact" ? true : false },
     // {
     //   id: 7,
     //   name: "Reviews",
@@ -47,9 +59,7 @@ const Navbar = () => {
     //   current: active === "reviews" ? true : false,
     // },
   ];
-  const setActivePage = (pagename) => {
-    setActive(String(pagename).toLowerCase());
-  };
+
   // ! {PROFILE MENU}
   // function classNames(...classes) {
   //   return classes.filter(Boolean).join(" ");
@@ -96,7 +106,6 @@ const Navbar = () => {
                           to: item.to,
                           name: item.name,
                           current: item.current,
-                          setActivePage: setActivePage,
                         }}
                       />
                     ))}
@@ -183,7 +192,6 @@ const Navbar = () => {
                     to: item.to,
                     name: item.name,
                     current: item.current,
-                    setActivePage: setActivePage,
                   }}
                 />
               ))}
