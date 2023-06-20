@@ -1,12 +1,9 @@
 import { Link } from "react-router-dom";
 
 const MenuButton = (props) => {
-  const { to, name, current, setActivePage } = props.data;
+  const { to, name, current } = props.data;
   return (
     <Link
-      onClick={() => {
-        setActivePage(name.toLowerCase() === "home" ? "" : name);
-      }}
       to={to}
       key={name}
       className={`relative px-3 py-1 overflow-hidden font-medium text-gray-600 rounded-lg  group ${
