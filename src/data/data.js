@@ -288,7 +288,16 @@ export const showCaseBlock = [
       "Full stack software development is the art of balancing technical depth with user-centric design to create a seamless, end-to-end experience for both developers and users.",
     link: "project",
     timeline: "right",
-    projects: [],
+    projects: [
+      {
+        id: 1,
+        title: "The Tech Corner",
+        githublink: "",
+        livelink: "https://the-tech-corner.onrender.com/",
+        imglink: "/images/mern.png",
+        used: "MERN",
+      },
+    ],
   },
 ];
 export const BlogData = [
