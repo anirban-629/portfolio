@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { LikeButton } from "../components";
+// import { LikeButton } from "../components";
 import { headingBadge, nameStyle } from "../../data/data";
 
 const PageButton2 = (props) => {
@@ -120,7 +120,9 @@ const Home = () => {
               <footer className="flex items-center mt-4"></footer>
               <div className="mt-4">
                 <PageButton1 text="About" link="/about" />
-                <span className="ml-3">{/* <LikeButton count={0} /> */}</span>
+                {/* <span className="ml-3">
+                  <LikeButton count={0} />
+                </span> */}
               </div>
             </div>
           </article>
