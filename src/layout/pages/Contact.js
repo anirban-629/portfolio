@@ -1,13 +1,17 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const Contact = () => {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
-  const mailSubmitHandler = async () => {
-    console.log(email, subject, message);
+  const mailSubmitHandler = async (e) => {
+    e.preventDefault();
+
+    // Open the user's default email application with the subject and body pre-filled
+    window.location.href = `mailto:anirban.msh629@gmail.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(message)}`;
   };
 
   return (
@@ -22,20 +26,11 @@ const Contact = () => {
             this form.
             <br /> Feel free to give your suggestions and feedback here.
           </p>
-          <form
-            action="mailto:anirban.msh629@gmail.com"
-            method="POST"
-            encType="text/plain"
-            className="space-y-8"
-            onSubmit={mailSubmitHandler}
-          >
+          <form onSubmit={mailSubmitHandler} className="space-y-8">
             <div>
               <label
                 htmlFor="email"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                }}
               >
                 Your email
               </label>
@@ -45,6 +40,8 @@ const Contact = () => {
                 className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                 placeholder="name@example.com"
                 required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div>
@@ -60,9 +57,8 @@ const Contact = () => {
                 className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                 placeholder="Let me know how I can improve"
                 required
-                onChange={(e) => {
-                  setSubject(e.target.value);
-                }}
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
               />
             </div>
             <div className="sm:col-span-2">
@@ -77,9 +73,8 @@ const Contact = () => {
                 rows="10"
                 className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 resize-none"
                 placeholder="Leave a comment..."
-                onChange={(e) => {
-                  setMessage(e.target.value);
-                }}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
               ></textarea>
             </div>
             <button
