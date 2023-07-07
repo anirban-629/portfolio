@@ -120,9 +120,7 @@ const Home = () => {
               <footer className="flex items-center mt-4"></footer>
               <div className="mt-4">
                 <PageButton1 text="About" link="/about" />
-                <span className="ml-3">
-                  <LikeButton count={0} />
-                </span>
+                <span className="ml-3">{/* <LikeButton count={0} /> */}</span>
               </div>
             </div>
           </article>
