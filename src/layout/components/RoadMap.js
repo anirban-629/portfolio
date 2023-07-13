@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { GuidedPathData } from "../../data/data";
 
 const RoadMapCard = (props) => {
@@ -15,9 +15,9 @@ const RoadMapCard = (props) => {
           <h1 className="text-lg">Step {step}</h1>
           <h1 className="text-xl font-bold">{paragraph}</h1>
         </div>
-        <a href="/" className="text-center text-white hover:text-gray-300">
+        <Link to="/" className="text-center text-white hover:text-gray-300">
           Download materials
-        </a>
+        </Link>
       </div>
     </div>
   );
@@ -54,9 +54,9 @@ export default RoadMap;
                 Orientation and Briefing on Uniliver basics
               </h1>
             </div>
-            <a href="/" className="text-center text-white hover:text-gray-300">
+            <Link to="/" className="text-center text-white hover:text-gray-300">
               Download materials
-            </a>
+            </Link>
           </div>
 
           <div className="transform transition cursor-pointer hover:-translate-y-2 ml-10 relative flex items-center px-6 py-4 bg-green-600 text-white rounded mb-10 flex-col md:flex-row space-y-4 md:space-y-0">
@@ -70,9 +70,9 @@ export default RoadMap;
                 Orientation and Briefing on Uniliver basics
               </h1>
             </div>
-            <a href="/" className="text-center text-white hover:text-gray-300">
+            <Link to="/" className="text-center text-white hover:text-gray-300">
               Download materials
-            </a>
+            </Link>
           </div>
 
           <div className="transform transition cursor-pointer hover:-translate-y-2 ml-10 relative flex items-center px-6 py-4 bg-purple-600 text-white rounded mb-10 flex-col md:flex-row space-y-4 md:space-y-0">
@@ -86,9 +86,9 @@ export default RoadMap;
                 Orientation and Briefing on Uniliver basics
               </h1>
             </div>
-            <a href="/" className="text-center text-white hover:text-gray-300">
+            <Link to="/" className="text-center text-white hover:text-gray-300">
               Download materials
-            </a>
+            </Link>
           </div>
 
           <div className="transform transition cursor-pointer hover:-translate-y-2 ml-10 relative flex items-center px-6 py-4 bg-yellow-600 text-white rounded mb-10 flex-col md:flex-row">
@@ -102,8 +102,8 @@ export default RoadMap;
                 Orientation and Briefing on Uniliver basics
               </h1>
             </div>
-            <a href="/" className="text-center text-white hover:text-gray-300">
+            <Link to="/" className="text-center text-white hover:text-gray-300">
               Download materials
-            </a>
+            </Link>
           </div>
  */

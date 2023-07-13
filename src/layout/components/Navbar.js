@@ -2,7 +2,7 @@ import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import "./styles/navbar.css";
 import MenuButton from "./helpers/MenuButton";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const location = useLocation();
@@ -84,16 +84,20 @@ const Navbar = () => {
 
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <img
-                    className="block h-4 w-auto lg:hidden"
-                    src="/images/logo.png"
-                    alt="Your Company"
-                  />
-                  <img
-                    className="hidden h-4 w-auto lg:block"
-                    src="/images/logo.png"
-                    alt="Your Company"
-                  />
+                  <Link to="/">
+                    <img
+                      className="block h-4 w-auto lg:hidden"
+                      src="/images/logo.png"
+                      alt="Your Company"
+                    />
+                  </Link >
+                  <Link to="/">
+                    <img
+                      className="hidden h-4 w-auto lg:block"
+                      src="/images/logo.png"
+                      alt="Your Company"
+                    />
+                  </Link>
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">

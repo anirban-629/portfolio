@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { showCaseBlock } from "../../../data/data";
 import ComingSoonPage from "../../pages/ComingSoonPage";
 
@@ -21,27 +21,27 @@ const Block = (props) => {
             </h4>
 
             <div className="mt-1 text-sm">
-              <a
+              <Link
                 className="hover:text-fuchsia-800"
-                href={github}
+                to={github}
                 target="_blank"
                 rel="noreferrer"
               >
                 <i className="fa-brands fa-github mr-2"></i>
                 github
-              </a>
+              </Link>
             </div>
             <div className="mt-4">
               <span className="text-teal-600 text-md font-semibold">
                 {liveLink && (
-                  <a
+                  <Link
                     className="hover:text-fuchsia-800"
-                    href={liveLink}
+                    to={liveLink}
                     target="_blank"
                     rel="noreferrer"
                   >
                     live on netlify
-                  </a>
+                  </Link>
                 )}
               </span>
               <span className="text-sm text-gray-600 lowercase">

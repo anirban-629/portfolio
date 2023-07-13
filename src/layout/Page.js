@@ -17,16 +17,16 @@ const Page = () => {
     <Router>
       <Navbar />
       <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="about" element={<About />} />
-        <Route exact path="skills" element={<Skills />} />
-        <Route exact path="projects" element={<Project />} />
-        <Route exact path="projects/project/:id" element={<SingleProject />} />
-        <Route exact path="blogs" element={<Blog />} />
-        <Route exact path="guidedpaths" element={<GuidedPaths />} />
-        <Route exact path="*" element={<NotFound />} />
-        <Route exact path="/roadmap/:id" element={<RoadMap />} />
-        <Route exact path="/contact" element={<Contact />} />
+        <Route exact path="/" Component={Home} />
+        <Route exact path="about" Component={About} />
+        <Route exact path="skills" Component={Skills} />
+        <Route exact path="projects" Component={Project} />
+        <Route exact path="projects/project/:id" Component={SingleProject} />
+        <Route exact path="blogs" Component={Blog} />
+        <Route exact path="guidedpaths" Component={GuidedPaths} />
+        <Route exact path="*" Component={NotFound} />
+        <Route exact path="/roadmap/:id" Component={RoadMap} />
+        <Route exact path="/contact" Component={Contact} />
       </Routes>
     </Router>
   );

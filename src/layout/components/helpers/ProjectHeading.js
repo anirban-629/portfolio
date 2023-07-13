@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ProjectHeading = ({
   smallHeading = "",
@@ -21,15 +22,15 @@ const ProjectHeading = ({
       </p>
       <p className="text-sm md:text-base text-black mb-4">{description}</p>
       {showGithub ? (
-        <a
-          href="https://github.com/anirban-629"
+        <Link
+          to="https://github.com/anirban-629"
           target="_blank"
           rel="noreferrer"
           className="bg-transparent mr-auto  text-[#82C3EC] hover:text-[#4B56D2] shadow hover:shadow-lg py-2 px-4 border border-[#ADA2FF] hover:border-transparent"
         >
           Explore My{" "}
           <i className="ml-1 fa-brands fa-github text-black text-lg"></i>
-        </a>
+        </Link>
       ) : (
         <></>
       )}
